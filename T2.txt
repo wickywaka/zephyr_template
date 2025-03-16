@@ -1,0 +1,33 @@
+# Install dependencies
+
+sudo apt install --no-install-recommends git cmake ninja-build gperf \
+  ccache dfu-util device-tree-compiler wget \
+  python3-dev python3-pip python3-setuptools python3-tk python3-wheel xz-utils file \
+  make gcc gcc-multilib g++-multilib libsdl2-dev libmagic1
+
+cmake --version
+python3 --version
+dtc --version
+
+sudo apt install python3-venv
+
+# Setup Python virutal env
+mkdir <workspace>
+cd <workspace>
+python3 -m venv .venv
+source .venv/bin/activate
+
+
+# West setup and dependencies in python virtual-env
+pip install west
+west init -m <this-repo>
+west update
+west packages pip --install
+
+
+# Install SDK (Toolchains, qemu, openocd)
+west sdk install -t arm-zephyr-eabi
+
+# Compiling and flashing
+west build -b nucleo_f302r8 app
+west flash
