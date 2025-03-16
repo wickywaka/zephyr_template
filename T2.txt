@@ -20,7 +20,7 @@ source .venv/bin/activate
 
 # West setup and dependencies in python virtual-env
 pip install west
-west init -m <this-repo>
+west init -m <this-repo> app
 west update
 west packages pip --install
 
