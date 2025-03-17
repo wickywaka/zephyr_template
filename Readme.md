@@ -24,3 +24,5 @@ west flash
 # OR Current error: board nrf52840dk/52840 does not support renode
 west simulate --runner=renode 
 ```
+
+https://docs.zephyrproject.org/latest/develop/tools/vscode.html#configure-the-c-c-extension
