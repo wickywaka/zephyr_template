@@ -19,5 +19,8 @@ west sdk install arm-zephyr-eabi
 
 # Compiling and flashing
 west build -b nrf52840dk/nrf52840
+
 west flash
+# OR Current error: board nrf52840dk/52840 does not support renode
+west simulate --runner=renode 
 ```
