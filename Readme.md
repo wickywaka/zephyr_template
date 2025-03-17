@@ -22,6 +22,7 @@ west build -b nrf52840dk/nrf52840
 
 west flash
 # OR Current error: board nrf52840dk/52840 does not support renode
+# FATAL ERROR: no simulate runner available for board nrf52840dk/nrf52840. Check the board's documentation for instructions.
 west simulate --runner=renode 
 ```
 
