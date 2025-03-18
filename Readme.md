@@ -26,4 +26,11 @@ west flash
 west simulate --runner=renode 
 ```
 
+# native sim
+
+```sh
+west build -b native_sim/native/64 app
+west build -t run
+```
+
 https://docs.zephyrproject.org/latest/develop/tools/vscode.html#configure-the-c-c-extension
