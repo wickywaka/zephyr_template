@@ -8,7 +8,7 @@ manifest:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
     - name: aemsig
-      url-base: https://github.com/Aemsig
+      url-base: git@github.com:Aemsig
 
   projects:
     - name: zephyr
