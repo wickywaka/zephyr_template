@@ -7,6 +7,8 @@ manifest:
   remotes:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
+    - name: aemsig
+      url-base: https://github.com/Aemsig
 
   projects:
     - name: zephyr
@@ -18,4 +20,7 @@ manifest:
         name-allowlist:
           - cmsis      # required by the ARM port
           - hal_nordic # required by the custom_plank board (Nordic based)
-
+    - name: xm122_zephyr
+      remote: aemsig
+      revision: main
+      path: modules/xm122
